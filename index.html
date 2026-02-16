@@ -1,41 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="styles.css">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-    <h1>Skill Swap</h1>
-      <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Browse Skills</a></li>
-                <li><a href="#">Offer Skills</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
 <main>
-    <section id="hero">
-        <h2>Welcome to Skill Swap</h2>
-        <p>Trade your talents with others!</p>
-    </section>
-    <section id="skills-placeholder">
-        <div class="card" onclick="alert('More details coming soon!')">
-            <h3>Guitar Lessons</h3>
-            <p>Learn basics in 3 weeks.</p>
-            <p>Price: Swap for Coding</p>
-        </div>
-    </section>
-</main>
+  <section id="filters">
+    <h2>Filter Skills</h2>
+    <button data-category="All">All</button>
+    <button data-category="Programming">Programming</button>
+    <button data-category="Music">Music</button>
+    <button data-category="Career">Career</button>
+  </section>
 
-<footer>
-    <p>&copy; 2026 Skill Swap</p>
-</footer>
-</body>
-<script src="script.js"></script>
-</html>
+  <section id="skills-container" class="skills-grid">
+  </section>
+  <section id="calculator">
+    <h2>Calculate Session Cost</h2>
+    <label>Hourly Rate ($): <input type="number" id="rate" min="0" step="0.01" value="20"></label>
+    <label>Hours: <input type="number" id="hours" min="0" step="0.5" value="1"></label>
+    <button id="calc-btn">Calculate</button>
+    <p>Total: <span id="total-cost">—</span></p>
+  </section>
+
+  <section id="matcher">
+    <h2>Find Matching Skills</h2>
+    <label>Preferred Category:
+      <select id="match-category">
+        <option value="Programming">Programming</option>
+        <option value="Music">Music</option>
+        <option value="Career">Career</option>
+      </select>
+    </label>
+    <label>Max Budget ($): <input type="number" id="max-price" min="0" value="30"></label>
+    <button id="match-btn">Find Matches</button>
+
+    <div id="match-results">
+    </div>
+  </section>
+
+</main>

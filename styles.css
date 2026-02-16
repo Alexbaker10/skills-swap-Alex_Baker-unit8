@@ -6,3 +6,6 @@ footer { text-align: center; padding: 20px; background: #eee; }
 #skills-placeholder { display: flex; gap: 20px; padding: 20px; }
 .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; cursor: pointer; }
 .card:hover { background-color: #f9f9f9; }
+.skills-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 20px;padding: 20px;}
+#filters button.active {background: #0066cc;color: white;}
